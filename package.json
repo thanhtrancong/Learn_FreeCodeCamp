@@ -1,14 +1,30 @@
 {
-	"name": "fcc-learn-npm-package-json",
-	"dependencies": {
-		"express": "^4.14.0"
-	},
-	"main": "server.js",
-	"scripts": {
-		"start": "node server.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/freeCodeCamp/boilerplate-npm.git"
-	}
+  "name": "y",
+  "version": "1.0.0",
+  "description": "my learning backend-api from freecodecamp.org",
+  "keywords": [
+    "descriptive",
+    "related",
+    "words",
+    "freecodecamp"
+  ],
+  "homepage": "https://github.com/thanhtrancong/Learn_FreeCodeCamp#readme",
+  "bugs": {
+    "url": "https://github.com/thanhtrancong/Learn_FreeCodeCamp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanhtrancong/Learn_FreeCodeCamp.git"
+  },
+  "license": "MIT",
+  "author": "Richard Tran",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.14.0"
+  }
 }
