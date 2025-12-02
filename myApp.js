@@ -26,4 +26,12 @@ app.get('/json', function(req, res) {
   res.json({"message": message});
 });
 
+// Route GET cho "/now" - chain middleware để add time
+app.get('/now', function(req, res, next) {
+  req.time = new Date().toString();
+  next();
+}, function(req, res) {
+  res.json({time: req.time});
+});
+
 module.exports = app;
