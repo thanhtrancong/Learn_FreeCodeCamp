@@ -34,4 +34,9 @@ app.get('/now', function(req, res, next) {
   res.json({time: req.time});
 });
 
+// Route GET cho "/:word/echo" - echo server với route parameter
+app.get('/:word/echo', function(req, res) {
+  res.json({echo: req.params.word});
+});
+
 module.exports = app;
