@@ -34,6 +34,13 @@ app.get('/now', function(req, res, next) {
   res.json({time: req.time});
 });
 
+// Route GET cho "/name" - query string parameters
+app.get('/name', function(req, res) {
+  let firstname = req.query.first;
+  let lastname = req.query.last;
+  res.json({name: firstname + ' ' + lastname});
+});
+
 // Route GET cho "/:word/echo" - echo server với route parameter
 app.get('/:word/echo', function(req, res) {
   res.json({echo: req.params.word});
