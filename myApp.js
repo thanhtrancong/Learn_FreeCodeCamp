@@ -5,9 +5,9 @@ console.log("Hello World");
 
 app.use('/public', express.static(__dirname + '/public'));
 
-// Route GET cho root path "/"
+// Route GET cho root path "/" - serve HTML file
 app.get('/', function(req, res) {
-  res.send('Hello Express');
+  res.sendFile(__dirname + '/views/index.html');
 });
 
 module.exports = app;
