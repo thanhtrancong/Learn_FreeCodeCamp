@@ -4,7 +4,11 @@ let app = express();
 
 console.log("Hello World");
 
-app.use('/public', express.static(__dirname + '/public'));
+// Root-level middleware - Logger
+app.use(function(req, res, next) {
+  console.log(req.method + " " + req.path + " - " + req.ip);
+  next();
+});
 
 // Route GET cho root path "/" - serve HTML file
 app.get('/', function(req, res) {
